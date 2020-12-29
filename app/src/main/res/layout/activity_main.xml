@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/initRandomData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/init_random_data"
+        app:layout_constraintBottom_toTopOf="@+id/showAllStudents"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/showAllStudents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/show_all_students"
+        app:layout_constraintBottom_toTopOf="@+id/quitApp"
+        app:layout_constraintEnd_toEndOf="@+id/initRandomData"
+        app:layout_constraintStart_toStartOf="@+id/initRandomData"
+        app:layout_constraintTop_toBottomOf="@+id/initRandomData" />
+
+    <Button
+        android:id="@+id/quitApp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/showAllStudents"
+        app:layout_constraintStart_toStartOf="@+id/showAllStudents"
+        app:layout_constraintTop_toBottomOf="@+id/showAllStudents" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="initRandomData" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
